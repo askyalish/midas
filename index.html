@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Midas Trading LLC</title>
+
+<style>
+body { font-family: Arial; margin:0; background:#f8f8f8; }
+
+/* HEADER */
+header { background:#6e6860; color:#f5b026; text-align:center; padding:20px; }
+nav { display:flex; justify-content:center; background:#ebb247; }
+nav a { color:#20170d; padding:14px 20px; text-decoration:none; font-weight:bold; }
+nav a:hover { background:#f0a23b; }
+
+/* HERO */
+.hero {
+  background:url('hero-image.jpg') center/cover no-repeat;
+  color:#000000;
+  text-align:center;
+  padding:100px 20px;
+}
+
+/* CONTAINER */
+.container { width:90%; max-width:1200px; margin:20px auto; }
+.section-title { text-align:center; color:#d32f2f; }
+
+/* ✅ RESTAURANTS GRID (3 PER ROW) */
+.restaurants-grid {
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:20px;
+}
+
+/* CARD */
+.restaurant-card {
+  background:#fff;
+  padding:15px;
+  border-radius:8px;
+  box-shadow:0 0 8px rgba(0,0,0,0.1);
+  text-align:center;
+}
+
+.restaurant-card img {
+  width:100%;
+  border-radius:6px;
+}
+
+/* BUTTON */
+.order-button {
+  display:inline-block;
+  padding:10px 20px;
+  background:#d32f2f;
+  color:#fff;
+  text-decoration:none;
+  border-radius:4px;
+  margin-top:10px;
+}
+
+/* SLIDER */
+.slider-container { position:relative; overflow:hidden; }
+.slider-wrapper { display:flex; }
+.slide { min-width:100%; text-align:center; }
+.slide img { width:100%; border-radius:6px; }
+
+.slider-button {
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,0.5);
+  color:#fff;
+  border:none;
+  padding:10px;
+  cursor:pointer;
+}
+.prev { left:10px; }
+.next { right:10px; }
+
+/* INSTAGRAM */
+.instagram-feeds {
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+/* FOOTER */
+footer {
+  background:#333;
+  color:#fff;
+  text-align:center;
+  padding:20px;
+}
+
+/* ✅ RESPONSIVE */
+@media(max-width:992px){
+  .restaurants-grid { grid-template-columns: repeat(2,1fr); }
+}
+@media(max-width:600px){
+  .restaurants-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Midas Trading LLC</h1>
+  <p>Delicious flavors across multiple cuisines</p>
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#restaurants">Restaurants</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="home">
+  <h1>Welcome to Midas Trading LLC</h1>
+  <p>Experience authentic flavors from our family of restaurants</p>
+</div>
+
+<!-- RESTAURANTS -->
+<div class="container" id="restaurants">
+    <h2 class="section-title">Our Restaurants</h2>
+
+    <div class="restaurants-grid">
+
+        <!-- ITALIANO (SLIDER) -->
+        <div class="restaurant-card">
+            <h3>Italiano</h3>
+            <div class="slider-container" id="italiano-slider">
+
+                <button class="slider-button prev" onclick="prevSlide('italiano-slider')">‹</button>
+
+                <div class="slider-wrapper">
+                    <div class="slide">
+                        <img src="Logos\italianoLogo.jpg">
+                        <p>Italiano Mawalah</p>
+                        <a href="https://www.talabat.com/oman/restaurant/28226/italiano?aid=1415" class="order-button" target="_blank">Order</a>
+                    </div>
+
+                    <div class="slide">
+                        <img src="Logos\italianoLogo.jpg">
+                        <p>Italiano Qurum</p>
+                        <a href="https://www.talabat.com/oman/restaurant/28225/italiano?aid=1397" class="order-button" target="_blank">Order</a>
+                    </div>
+                    <div class="slide">
+                        <img src="Logos\italianoLogo.jpg">
+                        <p>Italiano Al-Khoud</p>
+                        <a href="https://www.talabat.com/oman/restaurant/676115/italiano?aid=1410" class="order-button" target="_blank">Order</a>
+                    </div>
+                    <div class="slide">
+                        <img src="Logos\italianoLogo.jpg">
+                        <p>Italiano Mabella</p>
+                        <a href="https://www.talabat.com/oman/restaurant/689212/italiano?aid=6778" class="order-button" target="_blank">Order</a>
+                    </div>
+                    <div class="slide">
+                        <img src="Logos\italianoLogo.jpg">
+                        <p>Italiano Salah</p>
+                        <a href="https://www.talabat.com/oman/restaurant/767840/italiano?aid=2571" class="order-button" target="_blank">Order</a>
+                    </div>
+                </div>
+
+                <button class="slider-button next" onclick="nextSlide('italiano-slider')">›</button>
+            </div>
+        </div>
+
+        <!-- SUSHI BOX (SLIDER) -->
+        <div class="restaurant-card">
+            <h3> Sushi Box</h3>
+            <div class="slider-container" id="sushi-slider">
+
+                <button class="slider-button prev" onclick="prevSlide('sushi-slider')">‹</button>
+
+                    <div class="slider-wrapper">
+                        <div class="slide">
+                            <img src="Logos\sushibox.jpg">
+                            <p>Sushi Box Mawalah</p>
+                            <a href="https://www.talabat.com/oman/restaurant/642178/sushi-box?aid=1415" class="order-button" target="_blank">Order</a>
+                        </div>
+
+                        <div class="slide">
+                            <img src="Logos\sushibox.jpg">
+                            <p>Sushi Box Qurum</p>
+                            <a href="https://www.talabat.com/oman/restaurant/688112/sushi-box?aid=1397" class="order-button" target="_blank">Order</a>
+                        </div>
+                    </div>
+
+                <button class="slider-button next" onclick="nextSlide('sushi-slider')">›</button>
+            </div>
+        </div>
+
+        <!-- DR BURGER -->
+        <div class="restaurant-card">
+            <h3> Dr Burger</h3>
+            <img src="Logos\italianoLogo.jpg">
+            <a href="#" class="order-button">Order</a>
+        </div>
+
+        <!-- OMANI PLACE -->
+        <div class="restaurant-card">
+            <h3>🇴🇲 Omani Place</h3>
+            <img src="Logos\italianoLogo.jpg">
+            <a href="#" class="order-button">Order</a>
+        </div>
+
+        <!-- BRIYANI BOX -->
+        <div class="restaurant-card">
+            <h3> Briyani Box</h3>
+            <img src="Logos\briyanibox.jpg">
+            <a href="https://www.talabat.com/oman/restaurant/692823/biryani-box?aid=1416" class="order-button" target="_blank">Order</a>
+        </div>
+
+        <!-- SAWY -->
+        <div class="restaurant-card">
+            <h3> Sawy</h3>
+            <img src="Logos\italianoLogo.jpg">
+            <a href="#" class="order-button">Order</a>
+        </div>
+
+    </div>
+</div>
+
+<!-- INSTAGRAM -->
+<div class="container">
+    <h2 class="section-title">Follow Us</h2>
+        <div class="instagram-feeds">
+            <a href="https://www.instagram.com/midasoman" target="_blank">
+                <img src="Logos\instamidas.jpg" width="300" height="400">
+            </a>
+            <a href="https://www.instagram.com/italianooman" target="_blank">
+                <img src="Logos\instaitaliano.jpg" width="300" height="400">
+            </a>
+            <a href="https://www.instagram.com/sushibox.oman" target="_blank">
+                <img src="Logos\instasushibox.jpg" width="300" height="400">
+            </a>
+            
+        </div>
+</div>
+
+<!-- ABOUT -->
+<div class="container" id="about">
+    <h2 class="section-title">About</h2>
+    <p>Midas Trading LLC is committed to delivering high-quality dining experiences across multiple cuisines. Our restaurants serve authentic flavors, bringing people together over delicious meals.</p>
+</div>
+
+<!-- CONTACT -->
+<div class="container" id="contact">
+  <h2 class="section-title">Contact Us</h2>
+  <p>Email: info@midasoman.com</p>
+  <p>Phone: +968 00000000</p>
+  <p>Follow us on social media:</p>
+  <ul>
+    <li>Instagram: @MidasOman</li>
+    <li>Facebook: @MidasOman</li>
+  </ul>
+</div>
+
+<footer>
+    <p>© 2026 Midas Trading LLC. All Rights Reserved.</p>
+</footer>
+
+<!-- JS -->
+<script>
+    function nextSlide(id){
+    const slider=document.getElementById(id).querySelector('.slider-wrapper');
+    slider.appendChild(slider.firstElementChild);
+    }
+
+    function prevSlide(id){
+    const slider=document.getElementById(id).querySelector('.slider-wrapper');
+    slider.insertBefore(slider.lastElementChild, slider.firstElementChild);
+    }
+
+    /* AUTO PLAY */
+    setInterval(()=>{nextSlide('italiano-slider')},4000);
+    setInterval(()=>{nextSlide('sushi-slider')},4000);
+</script>
+
+</body>
+</html>
