@@ -28,35 +28,42 @@ nav a:hover { background:#f0a23b; }
 
 /* CONTAINER */
 /*.container { width:90%; max-width:1200px; margin:20px auto; }*/
-.container { width: 100%; padding: 10px; margin: 0 auto;}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
 .section-title { text-align:center; color:#d32f2f; }
 
 /* RESTAURANTS GRID (3 PER ROW) */
 .restaurants-grid {
   display:grid;
   grid-template-columns: repeat(3, 1fr);
-  gap:20px;
+  gap:15px;
 
 }
 
 /* CARD */
 .restaurant-card {
-  /*background:#ffffff;
+  background:#ffffff;
   width: 100%;
   padding:10px;
   border-radius:8px;
   box-shadow:0 0 8px rgba(0,0,0,0.1);
-  text-align:center;*/
+  text-align:center;
+  overflow: hidden; /* 🔥 prevents overflow */
 
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  flex-wrap:wrap;
 }
 .p {color:rgb(28, 23, 13);}
+
 .restaurant-card img {
-  width:100%;
   border-radius:6px;
+
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* BUTTON */
@@ -105,12 +112,18 @@ footer {
   padding:20px;
 }
 
-/* ✅ RESPONSIVE */
-@media(max-width:992px){
-  .restaurants-grid { grid-template-columns: repeat(2,1fr); }
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+  .restaurants-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-@media(max-width:600px){
-  .restaurants-grid { grid-template-columns: 1fr; }
+
+@media (max-width: 600px) {
+  .restaurants-grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
 </head>
