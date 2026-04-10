@@ -31,21 +31,27 @@ nav a:hover { background:#f0a23b; }
 .container { width: 100%; padding: 10px; margin: 0 auto;}
 .section-title { text-align:center; color:#d32f2f; }
 
-/* RESTAURANTS GRID (3 PER ROW) 
+/* RESTAURANTS GRID (3 PER ROW) */
 .restaurants-grid {
   display:grid;
   grid-template-columns: repeat(3, 1fr);
   gap:20px;
-}*/
+
+}
 
 /* CARD */
 .restaurant-card {
-  background:#ffffff;
+  /*background:#ffffff;
   width: 100%;
   padding:10px;
   border-radius:8px;
   box-shadow:0 0 8px rgba(0,0,0,0.1);
-  text-align:center;
+  text-align:center;*/
+
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
 }
 .p {color:rgb(28, 23, 13);}
 .restaurant-card img {
